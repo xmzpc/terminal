@@ -5,17 +5,14 @@
   "type": "module",
   "license": "MIT",
   "author": {
-    "name": "Yassine Fathi",
-    "url": "https://fathi.me",
-    "email": "yassine@fathi.me"
+    "name": "XMZPC",
+    "url": "https://xmzpc.me",
+    "email": "xmzpc007@gmail.com"
   },
-  "funding": {
-    "type": "Paypal",
-    "url": "https://paypal.me/yfthi"
-  },
+
   "repository": {
     "type": "git",
-    "url": "https://github.com/m4tt72/terminal"
+    "url": "https://github.com/xmzpc/terminal"
   },
   "scripts": {
     "dev": "vite",

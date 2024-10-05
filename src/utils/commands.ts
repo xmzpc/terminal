@@ -7,6 +7,32 @@ const hostname = window.location.hostname;
 
 export const commands: Record<string, (args: string[]) => Promise<string> | string> = {
   help: () => 'Available commands: ' + Object.keys(commands).join(', '),
+  about: () => {
+    return `
+🎭 Codename: XMZPC
+
+💻 Profile:
+   ▶ Java & Python Programmer
+   ▶ Backend Developer
+   ▶ Big Data Enthusiast
+
+🔧 Arsenal:
+   ▶ Java ☕ | Python 🐍
+   ▶ Spring Boot 🍃 | PostgreSQL 🐘
+   ▶ Kafka 🚀 | Docker 🐳
+   ▶ Flink 🌊 | Spark ⚡
+   ▶ Linux 🐧 | macOS 🍎
+
+🕵️ Specialties:
+   ▶ Designing robust backend services
+   ▶ Architecting high-throughput data processing systems
+   ▶ Optimizing distributed environments for scalability
+   ▶ Implementing high-availability solutions
+   ▶ Tuning systems for maximum performance and reliability
+
+💀 "Building bridges between data chaos and digital order."
+  `;
+},
   hostname: () => hostname,
   whoami: () => 'guest',
   date: () => new Date().toLocaleString(),
@@ -79,9 +105,7 @@ export const commands: Record<string, (args: string[]) => Promise<string> | stri
     return `Opening mailto:${packageJson.author.email}...`;
   },
   donate: () => {
-    window.open(packageJson.funding.url, '_blank');
-
-    return 'Opening donation url...';
+    return "Thanks! 🚀 Hack the planet! 💻";
   },
   weather: async (args: string[]) => {
     const city = args.join('+');
@@ -114,13 +138,15 @@ export const commands: Record<string, (args: string[]) => Promise<string> | stri
     }
   },
   banner: () => `
-███╗   ███╗██╗  ██╗████████╗████████╗███████╗██████╗
-████╗ ████║██║  ██║╚══██╔══╝╚══██╔══╝╚════██║╚════██╗
-██╔████╔██║███████║   ██║      ██║       ██╔╝ █████╔╝
-██║╚██╔╝██║╚════██║   ██║      ██║      ██╔╝ ██╔═══╝
-██║ ╚═╝ ██║     ██║   ██║      ██║      ██║  ███████╗
-╚═╝     ╚═╝     ╚═╝   ╚═╝      ╚═╝      ╚═╝  ╚══════╝ v${packageJson.version}
+██╗  ██╗███╗   ███╗███████╗██████╗  ██████╗
+╚██╗██╔╝████╗ ████║╚══███╔╝██╔══██╗██╔════╝
+ ╚███╔╝ ██╔████╔██║  ███╔╝ ██████╔╝██║     
+ ██╔██╗ ██║╚██╔╝██║ ███╔╝  ██╔═══╝ ██║     
+██╔╝ ██╗██║ ╚═╝ ██║███████╗██║     ╚██████╗
+╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝╚═╝      ╚═════╝v${packageJson.version}🚀
 
-Type 'help' to see list of available commands.
+Welcome to my terminal! 👋
+Type 'help' to see list of available commands.💡
 `,
+
 };
